@@ -10,6 +10,53 @@
 
 <body>
 
+    <!-- Barra de navegación -->
+    <nav>
+        <h1>Práctica de JavaScript</h1>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Formulario -->
+        <section class="form-section">
+            <h2>Agregar Usuario</h2>
+            <form id="formUsuario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ingresa el nombre" required>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" placeholder="Ingresa la edad" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Ingresa el email" required>
+
+                <button type="submit" id="btnAgregar">Agregar</button>
+                <button type="button" id="btnLimpiar">Limpiar</button>
+            </form>
+        </section>
+
+        <!-- Mensajes -->
+        <div id="mensaje" class="mensaje"></div>
+
+        <!-- Tabla de usuarios -->
+        <section class="tabla-section">
+            <h2>Lista de Usuarios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Edad</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaUsuarios">
+                    <!-- Filas dinámicas -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
     <script src="./script.js"></script>
 
     <!-- --socket-- desde aquí copiar el código hacia abajo-->
