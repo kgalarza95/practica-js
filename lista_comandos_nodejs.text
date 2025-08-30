@@ -1,0 +1,11 @@
+
+1. npm init -y
+2. npm install express socket.io chokidar
+3. agregar en el package.json en la sección "scripts" el comando: "start": "node server.js" (Ver el archivo "package.json")
+4. crear carpeta public
+5. copiar todo el html, css y js en la carpeta public porque ahí se pone todo lo que se muestra en la web
+6. crear archivo .gitignore y agregar /node_modules
+7. crear el archivo server.js (ver archivo server.js)
+8. agregar codigo de socket en js de index (ver en el index la parte del script donde dice --socket--) 
+9. ejecutar: npm start
+10. editar archivos y ver cambios en tiempo real =)

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <script src="./script.js"></script>
+
+    <!-- --socket-- desde aquí copiar el código hacia abajo-->
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+
+        // Conectar al servidor Socket.IO
+        const socket = io({ reconnection: true, reconnectionAttempts: 5 });
+
+
+        // Escuchar el evento de recarga
+        socket.on('reload', () => {
+            console.log('🔄 Recargando página debido a cambios en archivos...');
+            window.location.reload();
+        });
+
+        // Confirmar conexión
+        socket.on('connect', () => {
+            console.log('✅ Conectado al servidor de hot reload');
+        });
+
+        socket.on('disconnect', () => {
+            console.log('❌ Desconectado del servidor de hot reload');
+        });
+    </script>
+</body>
+
+</html>
